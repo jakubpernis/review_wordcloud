@@ -14,3 +14,5 @@ Path where to store the result (csv): data/reviews.csv
 ```
 
 In stored data there's a column `review_text` (among others) which contains the raw text of the reviews. Wordcloud can be constructed directly from the raw text, it's nicely described in [this tutorial on Datacamp](https://www.datacamp.com/community/tutorials/wordcloud-python). However, there's also an option to construct wordcloud using tokens frequencies, which is the approach we chose to use because we can preprocess the raw text more flexibly and in any way we want. For that purpose we defined custom `TextProcessor` class.
+
+Requires Python >= 3.8.

@@ -13,7 +13,7 @@ import structlog
 logger = structlog.get_logger()
 
 
-def extract_div_text(review_div, div_class_name: str) -> str:
+def extract_div_text(review_div: Tag, div_class_name: str) -> str:
     """Helper function to get contents of div if there are any."""
     if review_text_raw_html := review_div.find("div", {"class": div_class_name}):
         return review_text_raw_html.text.strip()
